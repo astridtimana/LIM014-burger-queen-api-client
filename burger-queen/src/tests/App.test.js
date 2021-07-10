@@ -57,7 +57,6 @@ describe('AUTH', () => {
 });
 
 //USERS
-
 describe('USERS', () => {
     test('getUsers: Debería retornar los emails de usuarios', async () => {
       const response = await getUsers();
@@ -93,8 +92,8 @@ describe('USERS', () => {
 
 
     test('deleteUsers:  Debería retornar al usurio eliminado', async () => {
-        const response = await deleteUsers('003');
-        expect(response.data).toBe(undefined);
+        const response = await deleteUsers('001');
+        expect(response.data).toBe('');
       });
 });
 // PRODUCTS 
@@ -109,7 +108,7 @@ describe('PRODUCTS', () => {
     });
     test('DeleteProducts - Debería eliminar un producto', async () => {
         const response = await  deleteProduct("001");
-        expect(response.data).toEqual(undefined);
+        expect(response.data).toEqual('');
     })
     test('PutProducts - Debería actualizar un producto', async () => {
         const response = await  putProducts(objProducts,"001");
@@ -129,7 +128,7 @@ describe('ORDERS', () => {
     });
     test('DeleteOrders - Debería eliminar una orden', async () => {
         const response = await  deleteOrders("002");
-        expect(response.data).toEqual(undefined);
+        expect(response.data).toEqual('');
     })
     test('PutOrders - Debería actualizar una orden', async () => {
         const response = await  putOrders(objOrders,"002");

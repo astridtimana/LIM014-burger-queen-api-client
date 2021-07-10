@@ -13,6 +13,7 @@ export const handlers = [
         )
       }),
 
+      //USERS
       rest.get('http://localhost:8888/users', (_req, res, ctx) => res(
         ctx.status(200),
         ctx.json({
@@ -28,7 +29,7 @@ export const handlers = [
         ctx.json(req.body),
       )),
     
-      rest.delete('http://localhost:8888/users', (_req, res, ctx) => res(
+      rest.delete('http://localhost:8888/users/001', (_req, res, ctx) => res(
         ctx.status(200),
         ctx.json('')
       )),
@@ -37,8 +38,7 @@ export const handlers = [
         ctx.status(200),
         ctx.json(req.body),
       )),
-    // Handles a GET /user request
-    // rest.get('http://localhost:8888/users', null),
+
     
     //PRODUCTS
     rest.get('http://localhost:8888/products', (_req, res, ctx) => {
@@ -66,12 +66,12 @@ export const handlers = [
         )
     }),
 
-    rest.delete('http://localhost:8888/products', (_req, res, ctx) => {
+    rest.delete('http://localhost:8888/products/001', (_req, res, ctx) => {
         // Persist user's authentication in the session
         return res(
           // Respond with a 200 status code
           ctx.status(200),
-          ctx.json({})
+          ctx.json('')
         )
     }),
 
@@ -126,12 +126,12 @@ export const handlers = [
         )
     }),
 
-    rest.delete('http://localhost:8888/orders', (_req, res, ctx) => {
+    rest.delete('http://localhost:8888/orders/002', (_req, res, ctx) => {
         // Persist user's authentication in the session
         return res(
           // Respond with a 200 status code
           ctx.status(200),
-          ctx.json({})
+          ctx.json('')
         )
     }),
 
