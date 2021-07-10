@@ -4,10 +4,9 @@ const baseUrl = 'http://localhost:8888/auth'
 
 export const postRequest = async (formData) => {
     const resp = await axios.post(baseUrl, formData); 
-    if (resp.status === 200) {
-        return resp;
-    } else {
-        throw new Error(`HTTP error! status: ${resp.message}`);
-    }
+   // if (resp.status !== 200) {
+   //     return new Error('Error');
+   // }
+    return resp;
     
 }

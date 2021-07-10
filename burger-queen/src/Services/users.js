@@ -98,9 +98,9 @@ export const putUsers = async (objectEdit, userId) => {
             },
             data:JSON.stringify(objectEdit),
           });
-          if (resp.status !== 200) {
-            return new Error('Error');
-          } 
+        //   if (resp.status !== 200) {
+        //     return new Error('Error');
+        //   } 
         return resp;
     } catch (error) {
         return error
